@@ -1,0 +1,44 @@
+xmlns:samsung="http://schemas.android.com/apk/res/maxa.orcchg.views"
+
+<RelativeLayout
+    android:id="@+id/surfaceHover"
+    android:layout_width="0dp"
+    android:layout_height="match_parent" >
+
+    <SomeOtherView
+        android:id="@+id/someotherviewid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <maxa.orcchg.views.FastDraggingView
+        android:id="@+id/right_hover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        samsung:vertical_padding="0dp"
+        samsung:horizontal_padding="0dp"
+        samsung:direction="right" />
+
+</RelativeLayout>
+
+
+
+boolean m_dragging_streched = false;
+m_dragging_view = (FastDraggingView) rootView.findViewById(R.id.right_hover);
+m_dragging_view.setOnDraggingListener(new OnDraggingListener() {
+	@Override
+	public void onDraggingStarted() {}
+	@Override
+	public void onDraggingProgress() {
+		m_dragging_streched = true;
+	}
+	@Override
+	public void onDraggingStopped() {
+	if (m_dragging_streched) {
+	  	m_dragging_streched = false;
+	  	// do something after dragging
+	}
+}});
+

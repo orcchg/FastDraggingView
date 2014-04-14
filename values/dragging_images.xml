@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="next_image_ids">
+       <item>@drawable/next</item>
+       <item>@drawable/next_pressed</item>
+       <item>@drawable/next_dim</item>
+   </array>
+   
+    <array name="previous_image_ids">
+       <item>@drawable/previous</item>
+       <item>@drawable/previous_pressed</item>
+       <item>@drawable/previous_dim</item>
+   </array>
+</resources>
